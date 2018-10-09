@@ -12,7 +12,7 @@ Edit the file ssb-interop.js with a text editor.
 
 Add this code to the very bottom (*edited thanks to amerritt14 for code support):
 
-```
+```javascript
 //SLACK DARK MODE
 document.addEventListener('DOMContentLoaded', function() {
  $.ajax({
