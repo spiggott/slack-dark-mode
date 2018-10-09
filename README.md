@@ -1,6 +1,29 @@
-## Welcome to GitHub Pages
+## Slack Dark Mode
 
-You can use the [editor on GitHub](https://github.com/spiggott/slack-dark-mode/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+An easy way to implement dark mode in Slack. Requires Mac OS High Sirra or later. Adapted from https://dev.to/changoman/easy-dark-mode-for-slack-1mmn.
+
+On a Mac, navigate to this directory:
+
+'''cd /Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static
+
+Edit the file ssb-interop.js with a text editor.
+
+Add this code to the very bottom (*edited thanks to amerritt14 for code support):
+
+'''
+document.addEventListener('DOMContentLoaded', function() {
+ $.ajax({
+   url: 'https://cdn.rawgit.com/laCour/slack-night-mode/master/css/raw/black.css',
+   success: function(css) {
+     let overrides = `
+     code { background-color: #535353; color: #85c5ff; } /* Change color: to whatever font color you want */
+     .c-mrkdwn__pre, .c-mrkdwn__quote { background: #535353 !important; background-color: #535353 !important; }
+     `
+     $("<style></style>").appendTo('head').html(css + overrides);
+   }
+ });
+});
+Save the file and restart Slack, you should have a Dark theme!
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
