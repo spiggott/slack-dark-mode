@@ -13,9 +13,11 @@ Edit the file ssb-interop.js with a text editor.
 Add this code to the very bottom (*edited thanks to amerritt14 for code support):
 
 ```
+//SLACK DARK MODE
 document.addEventListener('DOMContentLoaded', function() {
  $.ajax({
-   url: 'https://cdn.rawgit.com/laCour/slack-night-mode/master/css/raw/black.css',
+   url: 'https://github.com/spiggott/slack-dark-mode/blob/master/black.css',
+   
    success: function(css) {
      let overrides = `
      code { background-color: #535353; color: #85c5ff; } /* Change color: to whatever font color you want */
