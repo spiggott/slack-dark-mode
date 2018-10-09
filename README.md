@@ -1,6 +1,6 @@
 ## Slack Dark Mode
 
-An easy way to implement dark mode in Slack. Requires Mac OS High Sirra or later. Adapted from https://dev.to/changoman/easy-dark-mode-for-slack-1mmn.
+An easy way to implement dark mode in Slack on Mac OS. Requires High Sierra or later. Adapted from https://dev.to/changoman/easy-dark-mode-for-slack-1mmn.
 
 On a Mac, navigate to this directory:
 
